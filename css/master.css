@@ -1,0 +1,117 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: #160F31;
+  font-family: "Poppins", serif;
+}
+
+.wrapper,
+.content {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.content {
+  overflow-x: hidden;
+}
+
+.content .section {
+  width: 100%;
+  height: 100vh;
+}
+
+.content .section.hero {
+  background-image: url(../images/bg-back.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+div.options {
+  background-color: #0009;
+  backdrop-filter: blur(2px);
+  border-radius: 10px;
+  color: #fff;
+  height: 460px;
+  position: absolute;
+  padding: 0.4rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 380px;
+  animation: showInfo 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+div.options img.logo {
+  width: 120px;
+}
+div.options img.skill {
+  width: 240px;
+}
+
+div.options h2 {
+  margin: 0;
+  font-weight: 300;
+}
+
+div.options ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+div.options ul li {
+    border: 1px solid #b0105e;
+    border-radius: 4px;
+    background-color: #0009;
+    margin-bottom: 0.2rem;
+    padding: 0.2rem 0.4rem;
+    width: 200px;
+}
+
+.image-container {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  perspective: 500px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+@keyframes showInfo {
+  from {
+    transform: translate(-50%, 120%);
+  }
+  to {
+    transform: translate(-50%, -100%);
+  }
+}
