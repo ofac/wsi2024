@@ -6,14 +6,16 @@
     box-sizing: border-box;
 }
 
-body {
-  background-color: #160F31;
-  font-family: "Poppins", serif;
-}
-
 ::-webkit-scrollbar {
   display: none;
 }
+
+body {
+  background-color: #160F31;
+  font-family: "Poppins", serif;
+  pointer-events: none;
+}
+
 
 .wrapper,
 .content {
@@ -40,6 +42,7 @@ body {
 }
 
 div.options {
+  pointer-events: all;
   background-color: #0009;
   backdrop-filter: blur(2px);
   border-radius: 10px;
@@ -110,10 +113,14 @@ div.options ul li span.actions {
   display: flex;
   align-items: center;
   justify-content: center;
-  a {
+  a:is(:link, :visited) {
+    transition: transform 0.2s ease-in;
     img {
       margin-top: 0.3rem;
       width: 32px;
+    }
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }
