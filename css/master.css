@@ -123,7 +123,7 @@ div.wrapper {
           li {
             border: 1px solid #b0105e;
             border-radius: 4px;
-            background-color: #0009;
+            background-color: transparent;
             display: flex;
             gap: 1rem;
             align-items: center;
@@ -131,6 +131,10 @@ div.wrapper {
             margin-bottom: 0.2rem;
             padding: 0.2rem 0.4rem;
             width: 260px;
+            transition: background-color 0.4s ease-in;
+            &:hover {
+              background-color: #000e;
+            }
 
             span.info {
               display: flex;
