@@ -36,7 +36,7 @@ div.wrapper {
 
       div.scroll {
         color: #fff;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         text-align: center;
         position: absolute;
         top: 50%;
@@ -83,7 +83,7 @@ div.wrapper {
     div.options {
       pointer-events: all;
       background-color: #0009;
-      backdrop-filter: blur(2px);
+      backdrop-filter: blur(4px);
       border-radius: 10px;
       color: #fff;
       height: 560px;
@@ -93,7 +93,7 @@ div.wrapper {
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      width: 380px;
+      width: 340px;
       animation: showInfo 1s linear infinite;
       animation-play-state: paused;
       animation-delay: calc(var(--scroll) * -1s);
@@ -215,7 +215,7 @@ div.wrapper {
 
 @keyframes hideMouse {
   from {
-    opacity: 1;
+    opacity: .8;
   }
   to {
     opacity: 0;
